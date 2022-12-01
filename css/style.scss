@@ -1,0 +1,221 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900);
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	font-family: "Nunito", sans-serif;
+	font-weight: 400;
+	line-height: 1;
+	font-size: 16px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+
+// ---------------------
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	background: #ff7bbd;
+	@media screen and (min-width: 800px) {
+		padding: 30px 0;
+	}
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: #fff;
+	overflow: hidden;
+	@media screen and (min-width: 800px) {
+		border-radius: 15px;
+		box-shadow: 0 3px 6px rgb(45 51 56 / 8%);
+	}
+}
+
+.content {
+	padding: 20px 15px 70px;
+	max-width: 710px;
+	margin: 0 auto;
+	@media screen and (max-width: 480px) {
+		padding: 15px 15px 50px;
+	}
+	& h1 {
+		font-weight: 800;
+		font-size: 36px;
+		line-height: 130%;
+		color: #111111;
+		text-align: left;
+		margin-bottom: 20px;
+		@media screen and (max-width: 480px) {
+			text-align: center;
+			font-size: 32px;
+		}
+	}
+	& p {
+		margin-bottom: 20px;
+		line-height: 120%;
+		@media screen and (max-width: 480px) {
+			margin-bottom: 15px;
+		}
+		& span {
+			color: #0000ff;
+		}
+	}
+}
+
+.top-block {
+	background: url(../img/image.jpg) center / contain no-repeat;
+	padding-bottom: 40%;
+	&_2 {
+		margin-bottom: 20px;
+	}
+}
+
+.image-block {
+	background: url(../img/image2.png) center / contain no-repeat;
+	padding-bottom: 37%;
+	margin-bottom: 20px;
+}
+
+.btn-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.btn {
+	border-radius: 6px;
+	display: inline-flex;
+	font-size: 14px;
+	font-weight: 600;
+	background-color: #2da4d7;
+	color: #fff;
+	height: 44px;
+	max-width: 305px;
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.3s ease 0s;
+	&:hover {
+		transform: translateY(-3px);
+	}
+	& span {
+		display: inline-flex;
+		align-items: center;
+		&:before {
+			content: "";
+			width: 40px;
+			height: 40px;
+			margin-right: 5px;
+			background: url(../img/tg-icon.svg) center / contain no-repeat;
+		}
+	}
+}
+
+.start {
+	color: #808080;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+// scroll
+
+/* Работает в Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: blue orange;
+}
+
+/* Работает в Chrome, Edge и Safari */
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: orange;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: blue;
+	border-radius: 20px;
+	border: 3px solid orange;
+}
+
+// iOS
+
+body._iOS {
+	& .content {
+		& p {
+			font-size: 22px;
+		}
+		& h1 {
+			font-size: 36px;
+		}
+	}
+}
